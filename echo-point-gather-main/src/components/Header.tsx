@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Users, Menu, X } from "lucide-react";
 
@@ -24,7 +23,10 @@ const Header = () => {
             <a href="#about" className="text-gray-600 hover:text-primary transition-colors">
               About
             </a>
-            <Button className="bg-primary hover:bg-primary/90 text-white">
+            <Button variant="outline" onClick={() => window.location.href = '/login'}>
+              Login
+            </Button>
+            <Button className="bg-primary hover:bg-primary/90 text-white" onClick={() => window.location.href = '/join'}>
               Join Now
             </Button>
           </nav>
@@ -52,7 +54,10 @@ const Header = () => {
               <a href="#about" className="text-gray-600 hover:text-primary transition-colors">
                 About
               </a>
-              <Button className="bg-primary hover:bg-primary/90 text-white w-full">
+              <Button variant="outline" className="w-full" onClick={() => window.location.href = '/login'}>
+                Login
+              </Button>
+              <Button className="bg-primary hover:bg-primary/90 text-white w-full" onClick={() => window.location.href = '/join'}>
                 Join Now
               </Button>
             </nav>
